@@ -39,6 +39,7 @@ export class UserApiService {
       return apiResult;
     });
   } // POST /api/signup
+  
 
   postLogin(userInfo: User) {
     return this.httpThang.post(
@@ -55,7 +56,17 @@ export class UserApiService {
   } // POST /api/login
 
 
-  // DELETE /api/logout
+  deleteLogout(userInfo: User) {
+    return this.httpThang.delete(
+      `${environment.backendUrl}/api/home`
+    )
+    .toPromise()
+    .then((apiResult: any) => {
+      this.currentUser = apiResult.userInfo;
+
+      return apiResult;
+    });
+  } // DELETE /api/logout
 
   // GET /api/checklogin
 

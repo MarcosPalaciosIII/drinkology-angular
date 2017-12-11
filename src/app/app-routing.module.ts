@@ -1,7 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { HomePageComponent } from './home-page/home-page.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { DrinkListComponent } from './drink-list/drink-list.component';
+import { DrinkDetailsComponent } from './drink-details/drink-details.component';
+import { JoinPageComponent } from './join-page/join-page.component';
+
+const routes: Routes = [
+  { path: '', component: HomePageComponent },
+  { path: 'drinks', component: DrinkListComponent },
+  { path: 'drinks/:id', component: DrinkDetailsComponent },
+  { path: 'join', component: JoinPageComponent },
+
+  { path: '**', component: NotFoundComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
