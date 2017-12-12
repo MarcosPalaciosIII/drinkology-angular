@@ -15,6 +15,7 @@ import { DrinkDetailsComponent } from './drink-details/drink-details.component';
 import { JoinPageComponent } from './join-page/join-page.component';
 import { LoginComponent } from './join-page/login/login.component';
 import { SignupComponent } from './join-page/signup/signup.component';
+import { UserDrinksComponent } from './user-drinks/user-drinks.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { SignupComponent } from './join-page/signup/signup.component';
     DrinkDetailsComponent,
     JoinPageComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    UserDrinksComponent
   ],
   imports: [
     BrowserModule,

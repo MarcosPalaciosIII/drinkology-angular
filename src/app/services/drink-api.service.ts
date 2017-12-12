@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular//common/http';
 import 'rxjs/add/operator/toPromise';
+
 import { environment } from '../../environments/environment';
 
-export class Phone {
+export class Drink {
   drinkName: string;
   description: string;
   image: string;
@@ -24,7 +25,8 @@ export class DrinkApiService {
   // GET /api/drinks
   getDrinks() {
     return this.httpThang.get(
-      `${environment.backendUrl}/api/drinks`
+      `${environment.backendUrl}/api/drinks`,
+      {withCredentials: true}
     ).toPromise();
   }
 
@@ -34,14 +36,16 @@ export class DrinkApiService {
   // GET /api/drinks/:id
   getOneDrink(oneId: string){
   return this.httpThang.get(
-    `${environment.backendUrl}/api/drinks/${oneId}`
+    `${environment.backendUrl}/api/drinks/${oneId}`,
+    {withCredentials: true}
   ).toPromise();
   }
 
   // DELETE /api/drinks/:id
   deleteOneDrink(oneId: string) {
   return this.httpThang.delete(
-    `${environment.backendUrl}/api/drinks/${oneId}`
+    `${environment.backendUrl}/api/drinks/${oneId}`,
+    {withCredentials: true}
   ).toPromise();
   }
 

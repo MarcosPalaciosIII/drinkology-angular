@@ -13,11 +13,12 @@
     <div>
       <a routerLink="/"> Home </a>
       <a routerLink="/drinks"> Drinks </a>
+      <a *ngIf="userThang.currentUser" routerLink="/my-drinks"> My Drinks </a>
     </div>
 
     <div>
-      <a *ngIf="userThang.currentUser" routerLink="/logout" (click)="logout()"> Log Out </a>
-      <a routerLink="/join"> Join Us </a>
+      <a *ngIf="userThang.currentUser" routerLink="/logout" (click)="startLogOutAjax()"> Log Out </a>
+      <a *ngIf="!userThang.currentUser" routerLink="/join"> Join Us </a>
     </div>
   </nav>
 </div>

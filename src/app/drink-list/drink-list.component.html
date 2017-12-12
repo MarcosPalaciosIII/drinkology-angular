@@ -1,3 +1,12 @@
-<p>
-  drink-list works!
-</p>
+<h2> Drink List </h2>
+
+<ul class="drink-list-display">
+  <li *ngFor="let oneDrink of drinks">
+    <h3> {{ oneDrink.drinkName }} </h3>
+    <p> By <i>{{ oneDrink.drinkCreator }}</i> </p>
+    <img [src]="oneDrink.image" />
+    <br />
+
+    <a routerLink="/drinks/{{ oneDrink._id }}"> See Details </a>
+  </li>
+</ul>

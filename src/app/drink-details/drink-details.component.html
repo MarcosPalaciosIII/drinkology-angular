@@ -1,3 +1,50 @@
-<p>
-  drink-details works!
-</p>
+<h2> Drink Details </h2>
+
+<hr />
+
+<div class="drink-details-top">
+  <div class="drink-primary-info">
+    <h3> {{ drinkInfo.drinkName }} </h3>
+    <br />
+
+    <h4> Added by: {{ drinkInfo.drinkCreator }}</h4>
+    <p> Added on: <i>{{ drinkInfo.createdAt }}</i> </p>
+    <br />
+
+    <h3> <b>Description</b> </h3>
+    <p> <i>{{ drinkInfo.description }}</i> </p>
+  </div>
+
+  <div class="drink-image">
+    <img *ngIf="drinkInfo.image" [src]="drinkInfo.image" />
+
+  </div>
+</div>
+
+<hr />
+
+<div class="drink-details-bottom">
+  <div class="ingredients-div">
+    <h3> <b>Ingredients</b> </h3>
+    <ul>
+      <li *ngFor="let oneIngredient of drinkInfo.ingredients">
+        {{ oneIngredient }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="directions-div">
+    <h3> <b>Directions</b> </h3>
+    <p> {{ drinkInfo.directions }} </p>
+  </div>
+</div>
+
+<div class="buttons">
+  <button *ngIf="drinkInfo._id" (click)="addToFav">
+     Add to Favorites
+  </button>
+
+  <button class="btn-danger" *ngIf="drinkInfo._id" (click)="something">
+    Remove from Favorites
+  </button>
+</div>

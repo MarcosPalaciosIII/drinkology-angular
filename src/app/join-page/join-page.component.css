@@ -9,5 +9,9 @@ h2 {
 .box {
   border: 5px solid grey;
   box-sizing: border-box;
-  width: 50%;
+  width: 45%;
+}
+
+.join-forms {
+  justify-content: space-around;
 }

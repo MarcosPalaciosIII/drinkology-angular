@@ -12,6 +12,8 @@ export class User {
   username: string;
   password: string;
 
+  // user
+  favorites: string[];
   // assigned by the database
   _id: string;
   createdAt: string;
@@ -29,7 +31,8 @@ export class UserApiService {
   postSignup(userInfo: User) {
     return this.httpThang.post(
       `${environment.backendUrl}/api/signup`,
-      userInfo
+      userInfo,
+      {withCredentials: true}
     )
     .toPromise()
     .then((apiResult: any) => {
@@ -39,12 +42,13 @@ export class UserApiService {
       return apiResult;
     });
   } // POST /api/signup
-  
+
 
   postLogin(userInfo: User) {
     return this.httpThang.post(
       `${environment.backendUrl}/api/login`,
-      userInfo
+      userInfo,
+      {withCredentials: true}
     )
     .toPromise()
     .then((apiResult: any) => {
@@ -56,18 +60,57 @@ export class UserApiService {
   } // POST /api/login
 
 
-  deleteLogout(userInfo: User) {
-    return this.httpThang.delete(
-      `${environment.backendUrl}/api/home`
+  logout() {
+  return this.httpThang.delete(
+    `${environment.backendUrl}/api/logout`,
+    {withCredentials: true}
+  )
+  .toPromise()
+  .then((apiResult) => {
+    // update "currentUser" since we are logged OUT
+    this.currentUser = null;
+    // return "apiResult" for the component
+    return apiResult;
+  });
+} // DELETE /api/logout
+
+
+  getCheckLogin() {
+    return this.httpThang.get(
+      `${environment.backendUrl}/api/checklogin`,
+      // send the cookies even to a different domain
+      {withCredentials: true}
     )
     .toPromise()
     .then((apiResult: any) => {
+      // update "currentUser" in case we are logged in
       this.currentUser = apiResult.userInfo;
-
+      // return "apiResult" for the component
       return apiResult;
     });
-  } // DELETE /api/logout
+  } // GET /api/checklogin
 
-  // GET /api/checklogin
+
+  putAddDrink(userInfo: User) {
+    return this.httpThang.put(
+      `${environment.backendUrl}/api/my-drinks`,
+      userInfo,
+      {withCredentials: true}
+    )
+    .toPromise()
+    .then((apiResult: any) => {
+      // update "currentUser" since we are logged in
+      this.currentUser = apiResult.userInfo;
+      // return "apiResult" for the component
+      return apiResult;
+    });
+  } // PUT/api/my-drinks
+
+  getUserFavorites() {
+    return this.httpThang.get(
+      `${environment.backendUrl}/api/my-drinks`,
+      {withCredentials: true}
+    ).toPromise();
+  }
 
 }

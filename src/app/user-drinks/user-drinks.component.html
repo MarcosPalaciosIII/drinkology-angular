@@ -1,0 +1,17 @@
+<h2> My Favorite Drinks </h2>
+
+<ul class="drink-list-display">
+  <li *ngFor="let oneDrink of userThang.currentUser.favorites">
+    <h3> {{ oneDrink.drinkName }} </h3>
+    <p> By <i>{{ oneDrink.drinkCreator }}</i> </p>
+    <img [src]="oneDrink.image" />
+    <br />
+
+    <a routerLink="/drinks/{{ oneDrink }}"> See Details </a>
+  </li>
+</ul>
+
+<!--
+<p>
+  {{ userThang.currentUser.username }}
+</p> -->
