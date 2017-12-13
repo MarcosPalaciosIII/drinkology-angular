@@ -20,19 +20,19 @@ export class UserDrinksComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-  // this.userThang.getUserFavorites()
-  // .then((userFromDb: User[]) => {
-  //   console.log(userFromDb);
-  //
-  //   // THE MAGIC HAPPENS HERE
-  //   // (assign API results to component property)
-  //   this.userFromDb.favorites;
-  // })
-  // .catch((err) => {
-  //   alert("Sorry! Something went wrong.")
-  //
-  //   console.log("Drink List Error!")
-  //   console.log(err)
-  // })
+  this.drinkThang.getUserFavorites()
+  .then((drinkResults: Drink[]) => {
+    console.log(drinkResults);
+
+    // THE MAGIC HAPPENS HERE
+    // (assign API results to component property)
+    this.listOfDrinks = drinkResults;
+  })
+  .catch((err) => {
+    alert("Sorry! Something went wrong.")
+
+    console.log("Drink List Error!")
+    console.log(err)
+  })
   } // ngOnInit()
 }

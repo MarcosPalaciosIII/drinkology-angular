@@ -22,31 +22,47 @@ export class DrinkApiService {
 
   constructor(private httpThang: HttpClient) { }
 
-  // GET /api/drinks
   getDrinks() {
     return this.httpThang.get(
       `${environment.backendUrl}/api/drinks`,
       {withCredentials: true}
     ).toPromise();
-  }
-
-  // POST /api/drinks
+  } // GET /api/drinks
 
 
-  // GET /api/drinks/:id
   getOneDrink(oneId: string){
   return this.httpThang.get(
     `${environment.backendUrl}/api/drinks/${oneId}`,
     {withCredentials: true}
   ).toPromise();
-  }
+  } // GET /api/drinks/:id
 
-  // DELETE /api/drinks/:id
   deleteOneDrink(oneId: string) {
   return this.httpThang.delete(
     `${environment.backendUrl}/api/drinks/${oneId}`,
     {withCredentials: true}
   ).toPromise();
-  }
+  } // DELETE /api/drinks/:id
+
+  getUserFavorites() {
+    return this.httpThang.get(
+      `${environment.backendUrl}/api/my-drinks`,
+      {withCredentials: true}
+    ).toPromise();
+  } // GET /api/my-drinks
+
+  addUserFavorites() {
+    return this.httpThang.get(
+      `${environment.backendUrl}/api/my-drinks`,
+      {withCredentials: true}
+    ).toPromise();
+  } // PUT /api/drinks
+
+  deleteUserFavorites() {
+    return this.httpThang.get(
+      `${environment.backendUrl}/api/drinks`,
+      {withCredentials: true}
+    ).toPromise();
+  } // DELETE /api/drinks
 
 }

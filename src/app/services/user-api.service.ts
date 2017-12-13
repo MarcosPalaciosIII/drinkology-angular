@@ -106,11 +106,5 @@ export class UserApiService {
     });
   } // PUT/api/my-drinks
 
-  getUserFavorites() {
-    return this.httpThang.get(
-      `${environment.backendUrl}/api/my-drinks`,
-      {withCredentials: true}
-    ).toPromise();
-  }
 
 }

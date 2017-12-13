@@ -40,11 +40,11 @@
 </div>
 
 <div class="buttons">
-  <button *ngIf="drinkInfo._id" (click)="addToFav">
+  <button (click)="addUserFavorites">
      Add to Favorites
   </button>
 
-  <button class="btn-danger" *ngIf="drinkInfo._id" (click)="something">
+  <button class="btn-danger" *ngIf="drinkInfo._id" (click)="deleteUserFavorite">
     Remove from Favorites
   </button>
 </div>
