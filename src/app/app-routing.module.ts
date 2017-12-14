@@ -14,6 +14,8 @@ const routes: Routes = [
   { path: 'drinks/:id', component: DrinkDetailsComponent },
   { path: 'join', component: JoinPageComponent },
   { path: 'my-drinks', component: UserDrinksComponent },
+  { path: 'drinks/:id/add', component: DrinkDetailsComponent },
+  { path: 'drinks/:id/delete', component: DrinkDetailsComponent },
 
   { path: '**', component: NotFoundComponent }
 ];

@@ -1,0 +1,71 @@
+<h3> Add a Drink </h3>
+
+<div class="add-drink-form">
+  <div>
+    <label for="drinkName-input"> Enter Drink Name </label>
+    <input id="drinkName-input" type="text" name="drinkName" [(ngModel)]="newDrink.drinkName" />
+    <br />
+    <br />
+
+    <label for="description-input"> Enter Drink Description </label>
+    <input id="description-input" type="text" name="description" [(ngModel)]="newDrink.description" />
+    <br />
+    <br />
+
+    <label for="image-input"> Add an Image of your Drink </label>
+    <input id="image-input" type="text" name="image" [(ngModel)]="newDrink.image" />
+    <br />
+    <br />
+
+    <label for="deirections-input"> Directions </label>
+    <textarea id="descriptiion-input" name="deirections" [(ngModel)]="newDrink.deirections" ></textarea>
+    <br />
+  </div>
+
+  <div>
+    <label for="ingredients-input1"> Ingredients for your Drink </label>
+    <br />
+    <input id="ingredients-input1" type="text" name="ingredients" [(ngModel)]="newDrink.ingredients[0]" />
+    <br />
+
+    <label for="ingredients-input2"></label>
+    <br />
+    <input id="ingredients-input2" type="text" name="ingredients" [(ngModel)]="newDrink.ingredients[1]" />
+    <br />
+
+    <label for="ingredients-input3"></label>
+    <br />
+    <input id="ingredients-input3" type="text" name="ingredients" [(ngModel)]="newDrink.ingredients[2]" />
+    <br />
+
+    <label for="ingredients-input4"></label>
+    <br />
+    <input id="ingredients-input4" type="text" name="ingredients" [(ngModel)]="newDrink.ingredients[3]" />
+    <br />
+
+    <label for="ingredients-input5"></label>
+    <br />
+    <input id="ingredients-input5" type="text" name="ingredients" [(ngModel)]="newDrink.ingredients[4]" />
+    <br />
+
+    <label for="ingredients-input6"></label>
+    <br />
+    <input id="ingredients-input6" type="text" name="ingredients" [(ngModel)]="newDrink.ingredients[5]" />
+    <br />
+
+    <label for="ingredients-input7"></label>
+    <br />
+    <input id="ingredients-input7" type="text" name="ingredients" [(ngModel)]="newDrink.ingredients[6]" />
+    <br />
+
+    <label for="ingredients-input8"></label>
+    <br />
+    <input id="ingredients-input8" type="text" name="ingredients" [(ngModel)]="newDrink.ingredients[7]" />
+    <br />
+
+
+  </div>
+
+
+  <button (click)="addDrink"> Add Drink </button>
+</div>

@@ -13,6 +13,10 @@ export class UserDrinksComponent implements OnInit {
 
   listOfDrinks: Drink[] = [];
 
+  showConfig: any = {
+    showAddDrink: true
+  };
+
   constructor(
     private userThang: UserApiService,
     private drinkThang: DrinkApiService,
@@ -35,4 +39,13 @@ export class UserDrinksComponent implements OnInit {
     console.log(err)
   })
   } // ngOnInit()
+
+  toggleShow() {
+    if (this.showConfig.showAddFood) {
+      this.showConfig.showAddFood = false;
+    }
+    else {
+      this.showConfig.showAddFood = true;
+    }
+  }
 }

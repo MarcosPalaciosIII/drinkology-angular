@@ -1,0 +1,6 @@
+.add-drink-form {
+  display: flex;
+  flex-flow: row wrap;
+  width: 500px;
+  border: 1px solid lightgray;
+}

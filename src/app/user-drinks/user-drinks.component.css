@@ -12,3 +12,7 @@ img {
 h2 {
   text-align: center;
 }
+
+.show-addDrink{
+  visibility: visible;
+}

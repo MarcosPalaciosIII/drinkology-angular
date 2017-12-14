@@ -106,5 +106,20 @@ export class UserApiService {
     });
   } // PUT/api/my-drinks
 
+  addUserFavorites(oneId: string) {
+    return this.httpThang.put(
+      `${environment.backendUrl}/api/drinks/${oneId}/add`,
+      {},
+      {withCredentials: true}
+    ).toPromise();
+  } // PUT /api/drinks
+
+  deleteUserFavorites(oneId: string) {
+    return this.httpThang.delete(
+      `${environment.backendUrl}/api/drinks/${oneId}/delete`,
+      {withCredentials: true}
+    ).toPromise();
+  } // DELETE /api/drinks
+
 
 }
