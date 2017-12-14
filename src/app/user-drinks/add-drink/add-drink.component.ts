@@ -8,23 +8,25 @@ import { DrinkApiService, Drink } from '../../services/drink-api.service';
 })
 export class AddDrinkComponent implements OnInit {
 
-  drinks: any;
-
-  newDrink: any = {ingredients: []};
+  newDrink = new Drink();
 
   constructor(private drinkThang: DrinkApiService) { }
 
   ngOnInit() {
-    this.drinks = Drink
   }
 
   addDrink() {
-    this.drinks.push(this.newDrink);
+    this.drinkThang.postDrinks(this.newDrink)
+    .then((apiResults: Drink) => {
+      this.newDrink = new Drink();
+      alert("Your Drink has been added!")
+    })
+    .catch((err) => {
+      alert("Sorry! Something went wrong.");
+      console.log("Add Drink in error");
+      console.log(err);
+    });
 
-    // for(let key in this.newFood){
-    //   this.newFood[key] = "";
-    // }
-    console.log(Drink)
   }
 
 }

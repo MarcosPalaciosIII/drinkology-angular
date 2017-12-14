@@ -106,19 +106,28 @@ export class UserApiService {
     });
   } // PUT/api/my-drinks
 
+
   addUserFavorites(oneId: string) {
     return this.httpThang.put(
       `${environment.backendUrl}/api/drinks/${oneId}/add`,
       {},
       {withCredentials: true}
-    ).toPromise();
+    ).toPromise()
+    .then((apiResult: User) => {
+      this.currentUser = apiResult;
+      return apiResult;
+    });
   } // PUT /api/drinks
 
   deleteUserFavorites(oneId: string) {
     return this.httpThang.delete(
       `${environment.backendUrl}/api/drinks/${oneId}/delete`,
       {withCredentials: true}
-    ).toPromise();
+    ).toPromise()
+    .then((apiResult: User) => {
+      this.currentUser = apiResult;
+      return apiResult;
+    });
   } // DELETE /api/drinks
 
 

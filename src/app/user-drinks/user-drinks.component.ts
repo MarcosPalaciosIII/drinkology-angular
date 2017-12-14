@@ -41,11 +41,11 @@ export class UserDrinksComponent implements OnInit {
   } // ngOnInit()
 
   toggleShow() {
-    if (this.showConfig.showAddFood) {
-      this.showConfig.showAddFood = false;
+    if (this.showConfig.showAddDrink) {
+      this.showConfig.showAddDrink = false;
     }
     else {
-      this.showConfig.showAddFood = true;
+      this.showConfig.showAddDrink = true;
     }
   }
 }

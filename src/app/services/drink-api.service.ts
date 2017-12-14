@@ -15,10 +15,16 @@ export class Drink {
   _id: string;
   createdAt: string;
   updatedAt: string;
+
+  constructor () {
+    this.ingredients = [];
+  }
 }
 
 @Injectable()
 export class DrinkApiService {
+
+  currentDrink: Drink;
 
   constructor(private httpThang: HttpClient) { }
 
@@ -29,9 +35,10 @@ export class DrinkApiService {
     ).toPromise();
   } // GET /api/drinks
 
-  postDrinks() {
-    return this.httpThang.get(
+  postDrinks(newDrink: Drink) {
+    return this.httpThang.post(
       `${environment.backendUrl}/api/drinks`,
+      newDrink,
       {withCredentials: true}
     ).toPromise();
   } // POST /api/drinks

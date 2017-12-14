@@ -39,15 +39,15 @@
   </div>
 </div>
 
-<div class="buttons" *ngFor="let oneFavorite of userThang.currentUser.favorites">
+<div class="buttons">
   <p>
     {{ userThang.currentUser.favorites }}
   </p>
-  <button *ngIf="oneFavorite !== drinkInfo._id" (click)="addUserFavorites()">
+  <button *ngIf="!userThang.currentUser.favorites.includes(drinkInfo._id)" (click)="addUserFavorites()">
      Add to Favorites
   </button>
 
-  <button class="btn-danger" *ngIf="oneFavorite === drinkInfo._id" (click)="deleteUserFavorites()">
+  <button class="btn-danger" *ngIf="userThang.currentUser.favorites.includes(drinkInfo._id)" (click)="deleteUserFavorites()">
     Remove from Favorites
   </button>
 </div>
