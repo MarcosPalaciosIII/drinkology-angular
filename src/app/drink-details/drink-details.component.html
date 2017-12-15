@@ -8,7 +8,7 @@
     <br />
 
     <h4> Added by: {{ drinkInfo.drinkCreator }}</h4>
-    <p> Added on: <i>{{ drinkInfo.createdAt }}</i> </p>
+    <p> Added on: <i>{{ drinkInfo.createdAt | date:"fullDate" }}</i> </p>
     <br />
 
     <h3> <b>Description</b> </h3>
@@ -39,15 +39,19 @@
   </div>
 </div>
 
+<hr />
+
 <div class="buttons">
-  <p>
-    {{ userThang.currentUser.favorites }}
-  </p>
-  <button *ngIf="!userThang.currentUser.favorites.includes(drinkInfo._id)" (click)="addUserFavorites()">
+
+  <button class="btn-primary" *ngIf="!userThang.currentUser.favorites.includes(drinkInfo._id)" (click)="addUserFavorites()">
      Add to Favorites
   </button>
 
   <button class="btn-danger" *ngIf="userThang.currentUser.favorites.includes(drinkInfo._id)" (click)="deleteUserFavorites()">
     Remove from Favorites
+  </button>
+
+  <button *ngIf="userThang.currentUser.username === drinkInfo.drinkCreator" (click)="putEditDrink()">
+    Edit Drink
   </button>
 </div>

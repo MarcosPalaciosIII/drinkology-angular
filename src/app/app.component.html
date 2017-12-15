@@ -1,25 +1,26 @@
 <div class=nav-header>
   <header>
-    <h1> Drinkologist </h1>
-
-    <div class="user-show-nav">
-      <img *ngIf="userThang.currentUser" src="{{ userThang.currentUser.image }}" />
-      <p *ngIf="userThang.currentUser">
-    Hello, <b>{{ userThang.currentUser.username }}</b>
-    </p>
-    </div>
-  </header>
-  <nav>
     <div>
       <a routerLink="/"> Home </a>
       <a routerLink="/drinks"> Drinks </a>
       <a *ngIf="userThang.currentUser" routerLink="/my-drinks"> My Drinks </a>
     </div>
 
+    <h1> Drinkologist </h1>
+
+    <div class="user-show-nav">
+      <img *ngIf="userThang.currentUser" src="{{ userThang.currentUser.image }}" />
+      <p *ngIf="userThang.currentUser">
+    Hello, <b>{{ userThang.currentUser.username }}</b> |
+    </p>
     <div>
       <a *ngIf="userThang.currentUser" routerLink="/logout" (click)="startLogOutAjax()"> Log Out </a>
       <a *ngIf="!userThang.currentUser" routerLink="/join"> Join Us </a>
     </div>
+    </div>
+  </header>
+  <nav>
+
   </nav>
 </div>
 <hr />

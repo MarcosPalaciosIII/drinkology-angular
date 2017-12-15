@@ -5,11 +5,13 @@ button {
 }
 
 .buttons {
-  padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 7%;
 }
 
 img {
-  width: 85%;
+  width: 70%;
 }
 
 h2 {
@@ -24,25 +26,27 @@ h3 {
   display: flex;
   box-sizing: border-box;
   width: 85%;
-  padding: 0 20px;
+  padding:  0 4% 0 9%;
+  justify-content: space-around;
 }
 
 .drink-image {
   box-sizing: border-box;
-  width: 50%;
-  padding-left: 167px;
+  width: 53%;
+  padding-left: 18%;
 }
 
 .drink-primary-info {
   box-sizing: border-box;
-  width: 40%
+  width: 42%;
+  margin: 0 7% 0 3%
 }
 
 .drink-details-bottom {
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  padding: 0 20px;
+  padding:  0 4% 0 11%;
 }
 
 .ingredients-div {
@@ -53,6 +57,6 @@ h3 {
 
 .directions-div {
   box-sizing: border-box;
-  width: 25%;
-  padding-left: 30px;
+  width: 40%;
+  padding-left: 11%;
 }

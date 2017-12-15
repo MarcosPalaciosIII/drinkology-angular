@@ -1,6 +1,8 @@
 <h2> My Favorite Drinks </h2>
 
-<button (click)="toggleShow()"> Add Drink Form </button>
+<div class="form-button">
+  <button (click)="toggleShow()"> Add Drink Form </button>
+</div>
 
 <app-add-drink [ngClass]="{'show-addDrink': showConfig.showAddDrink}"></app-add-drink>
 
@@ -8,9 +10,6 @@
   <li *ngFor="let oneDrink of listOfDrinks">
     <h3> {{ oneDrink.drinkName }} </h3>
     <p> By <i>{{ oneDrink.drinkCreator }}</i> </p>
-    <img [src]="oneDrink.image" />
-    <br />
-
-    <a routerLink="/drinks/{{ oneDrink._id }}"> See Details </a>
+    <a routerLink="/drinks/{{ oneDrink._id }}"> <img [src]="oneDrink.image" /> </a>
   </li>
 </ul>

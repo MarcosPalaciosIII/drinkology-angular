@@ -26,10 +26,10 @@ h2 {
 }
 
 #form button {
-  background: #123b41;
-  border: 1px solid #123b41;
+  background: #0e0b16;
+  border: 1px solid #0e0b16;
   border-radius: 4px;
-  color: #fff;
+  color: #e7dfdd;
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
@@ -41,7 +41,7 @@ h2 {
 }
 
 #form button:hover {
-  background: #fff;
-  color: #43a3e6;
+  background: #e7dfdd;
+  color: #0e0b16;
   transition: .3s ease background;
 }

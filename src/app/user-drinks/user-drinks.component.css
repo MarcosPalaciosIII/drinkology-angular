@@ -16,3 +16,8 @@ h2 {
 .show-addDrink{
   visibility: hidden;
 }
+
+.form-button {
+  display: flex;
+  justify-content: center;
+}

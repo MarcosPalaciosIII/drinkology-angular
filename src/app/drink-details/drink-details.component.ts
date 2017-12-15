@@ -54,7 +54,7 @@ export class DrinkDetailsComponent implements OnInit {
   } // getDrinkDetails()
 
   addUserFavorites() {
-    console.log(this.drinkInfo._id)
+    console.log(this.drinkInfo._id);
 
     this.userThang.addUserFavorites(this.drinkInfo._id)
     .then((drinkResults: User) => {
@@ -71,7 +71,7 @@ export class DrinkDetailsComponent implements OnInit {
   }
 
   deleteUserFavorites() {
-    console.log(this.drinkInfo._id)
+    console.log(this.drinkInfo._id);
 
     this.userThang.deleteUserFavorites(this.drinkInfo._id)
     .then((drinkResults: User) => {
@@ -85,6 +85,22 @@ export class DrinkDetailsComponent implements OnInit {
       console.log("Remove Drink from List Error!")
       console.log(err)
     })
+  }
+
+  putEditDrink(urlId) {
+    console.log(this.drinkInfo._id);
+
+    this.drinkThang. putEditDrink(urlId)
+    .then((drinkResults: Drink) => {
+      this.drinkInfo = drinkResults
+    })
+    .catch((err) => {
+      alert("Sorry! Something went wrong.")
+
+      console.log("Drink List Error!")
+      console.log(err)
+    });
+
   }
 
 }

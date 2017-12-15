@@ -58,12 +58,27 @@ export class DrinkApiService {
   ).toPromise();
   } // DELETE /api/drinks/:id
 
-  getUserFavorites() {
+  getUserDrink(oneId: string) {
     return this.httpThang.get(
-      `${environment.backendUrl}/api/my-drinks`,
+      `${environment.backendUrl}/api/drinks/${oneId}/edit`,
       {withCredentials: true}
     ).toPromise();
   } // GET /api/my-drinks
+
+  getUserFavorites(oneId: string) {
+    return this.httpThang.get(
+      `${environment.backendUrl}/api/my-drinks`,
+      {withCredentials: true}
+    ).toPromise()
+
+  } // GET /api/drinks/my-drinks
+
+  putEditDrink(oneId: string) {
+    return this.httpThang.put(
+      `${environment.backendUrl}/api/drinks/${oneId}/edit`,
+      {withCredentials: true}
+    ).toPromise()
+  }
 
 
 }

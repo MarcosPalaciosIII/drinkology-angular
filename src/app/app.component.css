@@ -4,14 +4,16 @@ a {
   display: inline-block;
   margin: 5px;
   font-size: 20px;
+  padding-top: 17px;
+  color: #ff553d;
 }
 
 h1 {
   margin-top: 0;
   font-family: "Amaranth", sans-serif;
   font-weight: bold;
-  color: midnightblue;
-  /*padding: 10px 0 0 10px;*/
+  color: #e7dfdd;
+  padding: 7px 0 0 0;
 }
 
 header {
@@ -20,28 +22,28 @@ header {
   flex-direction: row;
 }
 
-nav {
+/*nav {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   padding: 0 20px 0 10px;
-}
+}*/
 
 .nav-header {
-  background-color: bisque;
+  background-color: #0e0b16;
   margin: 0 auto;
-  padding: 20px 15px 0 15px;
+  padding: 0.5% 7% 0;
 }
 
 hr {
   border: 0;
-  color: transparent;
+  color: lightgray;
   margin: 0;
 }
 
 img {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
 }
 
 .user-show-nav {
@@ -53,4 +55,5 @@ img {
 .user-show-nav p {
   padding-top: 21px;
   font-size: 21px;
+  color: #d5d5d5;
 }

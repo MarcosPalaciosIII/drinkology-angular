@@ -4,9 +4,6 @@
   <li *ngFor="let oneDrink of drinks">
     <h3> {{ oneDrink.drinkName }} </h3>
     <p> By <i>{{ oneDrink.drinkCreator }}</i> </p>
-    <img [src]="oneDrink.image" />
-    <br />
-
-    <a routerLink="/drinks/{{ oneDrink._id }}"> See Details </a>
+    <a routerLink="/drinks/{{ oneDrink._id }}"> <img [src]="oneDrink.image" /> </a>
   </li>
 </ul>

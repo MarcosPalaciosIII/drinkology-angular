@@ -1,6 +1,41 @@
 .add-drink-form {
   display: flex;
   flex-flow: row wrap;
-  width: 500px;
+  width: 49%;
   border: 1px solid lightgray;
+  line-height: 85%;
+  justify-content: space-around;
+}
+
+.drink-div {
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+h4 {
+  margin: 0;
+}
+
+button {
+  margin: 1%;
+}
+
+.ingredients-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.row {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.add-drink-form-left-div {
+  margin-top: 4%;
 }
