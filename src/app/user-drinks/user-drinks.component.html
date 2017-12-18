@@ -4,7 +4,12 @@
   <button (click)="toggleShow()"> Add Drink Form </button>
 </div>
 
-<app-add-drink [ngClass]="{'show-addDrink': showConfig.showAddDrink}"></app-add-drink>
+<app-add-drink [ngClass]="{
+    animated: true,
+    'show-addDrink': showConfig.clicked,
+    fadeInLeft: showConfig.showAddDrink,
+    fadeOutLeft: !showConfig.showAddDrink
+  }"></app-add-drink>
 
 <ul class="drink-list-display">
   <li *ngFor="let oneDrink of listOfDrinks">

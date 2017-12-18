@@ -1,0 +1,59 @@
+<h2> Edit Drink Details </h2>
+
+<hr />
+
+<div class="drink-details-top">
+  <div class="drink-primary-info">
+    <label for="drinkName-edit"> Drink Name: </label>
+    <input id="drinkName-edit" type="text"  [(ngModel)]="drinkInfo.drinkName" name="drinkName" />
+    <br />
+
+    <h4> Added by: {{ drinkInfo.drinkCreator }}</h4>
+    <p> Added on: <i>{{ drinkInfo.createdAt | date:"fullDate" }}</i> </p>
+    <br />
+
+    <label for="description-edit"> Description: </label>
+    <input id="description-edit" type="text" [(ngModel)]="drinkInfo.description" name="description" />
+  </div>
+
+  <div class="drink-image">
+    <img *ngIf="drinkInfo.image" [src]="drinkInfo.image" />
+    <br />
+    <label for="image-edit"> Image URL </label>
+    <input id="image-edit" type="text" [(ngModel)]="drinkInfo.image" name="image" />
+
+  </div>
+</div>
+
+<hr />
+
+<div class="drink-details-bottom">
+  <div class="ingredients-div">
+    <label for="ingredients-edit"> Ingredients </label>
+    <input id="ingredients-edit" type="text" name="ingredients" [(ngModel)]="drinkInfo.ingredients[0]" />
+
+    <input id="ingredients-edit" type="text" name="ingredients" [(ngModel)]="drinkInfo.ingredients[1]" />
+
+    <input id="ingredients-edit" type="text" name="ingredients" [(ngModel)]="drinkInfo.ingredients[2]" />
+
+    <input id="ingredients-edit" type="text" name="ingredients" [(ngModel)]="drinkInfo.ingredients[3]" />
+
+    <input id="ingredients-edit" type="text" name="ingredients" [(ngModel)]="drinkInfo.ingredients[4]" />
+
+    <input id="ingredients-edit" type="text" name="ingredients" [(ngModel)]="drinkInfo.ingredients[5]" />
+
+    <input id="ingredients-edit" type="text" name="ingredients" [(ngModel)]="drinkInfo.ingredients[6]" />
+
+    <input id="ingredients-edit" type="text" name="ingredients" [(ngModel)]="drinkInfo.ingredients[7]" />
+  </div>
+
+  <div class="directions-div">
+    <label for="ddirections-edit"> Directions </label>
+    <br />
+    <textarea id="directions-edit" [(ngModel)]="drinkInfo.directions" name="directions" ></textarea>
+  </div>
+
+</div>
+<div class="edit-button-div">
+  <button class="btn-success" (click)="putEditDrink()"> Edit Drink </button>
+</div>

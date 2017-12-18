@@ -38,6 +38,7 @@ h2 {
   text-transform: uppercase;
   transition: .3s ease background;
   width: 100%;
+  outline-color: #ff553d;
 }
 
 #form button:hover {

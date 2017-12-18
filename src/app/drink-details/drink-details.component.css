@@ -1,8 +1,45 @@
 button {
   background-color: #123b41;
   color: white;
-  font-size: 20px;
+  font-size: 1.1vw;
 }
+
+a {
+  color: #ff553d;
+  font-size: 1.2vw;
+  padding-right: 1.3vw;
+  margin-left: 3vw;
+  /*cursor: pointer;*/
+}
+
+.add-favorite-btn {
+  cursor: copy;
+}
+
+.remove-favorite-btn {
+  cursor: url('./../../assets/cursor.cur'), auto
+}
+
+.edit-btn {
+  background-color: #0e0b16;
+  border-color: #0e0b16;
+  color: #d5d5d5;
+  outline-color: #ff553d;
+  outline-color: #ff553d;
+  border-radius: .5vw 1.7vw;
+  outline-style: double;
+}
+
+.edit-btn:hover {
+  background-color: #ff553d;
+  border-color: #ff553d;
+  color: #d5d5d5;
+  outline-color: #0e0b16;
+  outline-color: #0e0b16;
+  border-radius: 1.7vw .5vw;
+  outline-style: double;
+}
+
 
 .buttons {
   display: flex;
@@ -11,7 +48,7 @@ button {
 }
 
 img {
-  width: 70%;
+  width: 18vw;
 }
 
 h2 {

@@ -1,5 +1,20 @@
 <h2> Drink Details </h2>
 
+<div class="buttons">
+
+  <a class="add-favorite-btn" *ngIf="!userThang.currentUser.favorites.includes(drinkInfo._id)" (click)="addUserFavorites()">
+    Add to Favorites
+  </a>
+
+  <a class="remove-favorite-btn" *ngIf="userThang.currentUser.favorites.includes(drinkInfo._id)" (click)="deleteUserFavorites()">
+    Remove from Favorites
+  </a>
+
+  <button class="edit-btn" *ngIf="userThang.currentUser.username === drinkInfo.drinkCreator" routerLink="/drinks/{{ drinkInfo._id }}/edit">
+    Edit Drink
+  </button>
+</div>
+
 <hr />
 
 <div class="drink-details-top">
@@ -40,18 +55,3 @@
 </div>
 
 <hr />
-
-<div class="buttons">
-
-  <button class="btn-primary" *ngIf="!userThang.currentUser.favorites.includes(drinkInfo._id)" (click)="addUserFavorites()">
-     Add to Favorites
-  </button>
-
-  <button class="btn-danger" *ngIf="userThang.currentUser.favorites.includes(drinkInfo._id)" (click)="deleteUserFavorites()">
-    Remove from Favorites
-  </button>
-
-  <button *ngIf="userThang.currentUser.username === drinkInfo.drinkCreator" (click)="putEditDrink()">
-    Edit Drink
-  </button>
-</div>

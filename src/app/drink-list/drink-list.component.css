@@ -7,9 +7,14 @@
 }
 
 img {
-  width: 200px;
+  width: 15vw;
+  height: 25vh;
 }
 
 h2 {
   text-align: center;
+}
+
+li {
+  list-style: none;
 }

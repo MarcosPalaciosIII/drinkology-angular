@@ -37,13 +37,15 @@ header {
 
 hr {
   border: 0;
-  color: lightgray;
+  color: #d5d5d5;
   margin: 0;
 }
 
 img {
-  width: 45px;
-  height: 45px;
+  width: 3vw;
+  height: 6vh;
+  display: flex;
+  align-self: center;
 }
 
 .user-show-nav {
@@ -56,4 +58,5 @@ img {
   padding-top: 21px;
   font-size: 21px;
   color: #d5d5d5;
+  padding-left: 0.5vw;
 }

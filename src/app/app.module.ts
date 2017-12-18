@@ -17,6 +17,7 @@ import { LoginComponent } from './join-page/login/login.component';
 import { SignupComponent } from './join-page/signup/signup.component';
 import { UserDrinksComponent } from './user-drinks/user-drinks.component';
 import { AddDrinkComponent } from './user-drinks/add-drink/add-drink.component';
+import { EditDrinkComponent } from './edit-drink/edit-drink.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { AddDrinkComponent } from './user-drinks/add-drink/add-drink.component';
     LoginComponent,
     SignupComponent,
     UserDrinksComponent,
-    AddDrinkComponent
+    AddDrinkComponent,
+    EditDrinkComponent
   ],
   imports: [
     BrowserModule,

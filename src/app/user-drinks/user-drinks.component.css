@@ -6,18 +6,42 @@
 }
 
 img {
-  width: 200px;
+  width: 15vw;
+  height: 25vh;
 }
 
 h2 {
   text-align: center;
 }
 
+app-add-drink {
+  display: none;
+}
 .show-addDrink{
-  visibility: hidden;
+  display: block;
 }
 
 .form-button {
   display: flex;
   justify-content: center;
+}
+
+button {
+  background-color: #d5d5d5;
+  border-radius: 1.7vw .5vw;
+  color: #0e0b16;
+  outline-color: #0e0b16;
+  outline-style: double;
+}
+
+button:hover {
+  background-color: #0e0b16;
+  border-radius: .5vw 1.7vw;
+  color: #d5d5d5;
+  outline-color: #ff553d;
+  outline-style: double;
+}
+
+li {
+  list-style: none;
 }

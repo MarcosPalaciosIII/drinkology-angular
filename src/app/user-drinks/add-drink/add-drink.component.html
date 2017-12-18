@@ -5,25 +5,41 @@
     <div class="row">
       <div class="add-drink-form">
         <div class="col-sm-6 add-drink-form-left-div">
-          <div>
-            <label for="drinkName-input"> Enter Drink Name </label>
-            <input id="drinkName-input" type="text" name="drinkName" [(ngModel)]="newDrink.drinkName" />
-            <br />
-            <br />
+          <div class="add-drink-form-leftside-left-div">
+            <div class="add-drink-form-leftside-labels">
 
-            <label for="description-input"> Enter Drink Description </label>
-            <input id="description-input" type="text" name="description" [(ngModel)]="newDrink.description" />
-            <br />
-            <br />
+              <label for="drinkName-input"> Enter Drink Name: </label>
+              <input id="drinkName-input" type="text" name="drinkName" [(ngModel)]="newDrink.drinkName" />
+              <br />
+              <br />
 
-            <label for="image-input"> Add an Image of your Drink </label>
-            <input id="image-input" type="text" name="image" [(ngModel)]="newDrink.image" />
-            <br />
-            <br />
+              <label for="description-input"> Enter Drink Description: </label>
+              <input id="description-input" type="text" name="description" [(ngModel)]="newDrink.description" />
+              <br />
+              <br />
 
-            <label for="deirections-input"> Directions </label>
-            <textarea id="descriptiion-input" name="deirections" [(ngModel)]="newDrink.deirections" ></textarea>
-            <br />
+              <label for="image-input"> Add Drink Image:  </label>
+              <input id="image-input" type="text" name="image" [(ngModel)]="newDrink.image" />
+              <br />
+              <br />
+
+              <label for="deirections-input"> Directions: </label>
+              <textarea id="descriptiion-input" name="deirections" [(ngModel)]="newDrink.deirections" ></textarea>
+
+            </div>
+            <div>
+
+
+
+
+
+
+
+
+
+            </div>
+
+
           </div>
 
         </div>
@@ -55,7 +71,7 @@
 
             <br />
 
-            <div>
+            <div class="add-drink-form-right-div">
               <label for="ingredients-input5"></label>
               <br />
               <input id="ingredients-input5" type="text" name="ingredients" [(ngModel)]="newDrink.ingredients[4]" />
@@ -79,7 +95,7 @@
           </div>
 
         </div>
-        <button class="btn-success" (click)="addDrink()"> Add Drink </button>
+        <button class="add-btn" (click)="addDrink()"> Add Drink </button>
       </div>
 
     </div>

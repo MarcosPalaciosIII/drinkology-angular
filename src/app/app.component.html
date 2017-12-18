@@ -13,15 +13,13 @@
       <p *ngIf="userThang.currentUser">
     Hello, <b>{{ userThang.currentUser.username }}</b> |
     </p>
-    <div>
-      <a *ngIf="userThang.currentUser" routerLink="/logout" (click)="startLogOutAjax()"> Log Out </a>
-      <a *ngIf="!userThang.currentUser" routerLink="/join"> Join Us </a>
-    </div>
+      <div>
+        <a *ngIf="userThang.currentUser" routerLink="/logout" (click)="startLogOutAjax()"> Log Out </a>
+        <a *ngIf="!userThang.currentUser" routerLink="/join"> Join Us </a>
+      </div>
     </div>
   </header>
-  <nav>
 
-  </nav>
 </div>
 <hr />
 

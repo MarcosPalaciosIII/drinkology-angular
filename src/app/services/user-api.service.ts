@@ -18,6 +18,10 @@ export class User {
   _id: string;
   createdAt: string;
   updatedAt: string;
+
+  constructor() {
+    this.favorites = [];
+  }
 }
 
 @Injectable()
@@ -130,7 +134,7 @@ export class UserApiService {
     });
   } // DELETE /api/drinks
 
-  
+
 
 
 }

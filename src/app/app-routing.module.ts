@@ -7,6 +7,7 @@ import { DrinkListComponent } from './drink-list/drink-list.component';
 import { DrinkDetailsComponent } from './drink-details/drink-details.component';
 import { JoinPageComponent } from './join-page/join-page.component';
 import { UserDrinksComponent } from './user-drinks/user-drinks.component';
+import { EditDrinkComponent } from './edit-drink/edit-drink.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'my-drinks', component: UserDrinksComponent },
   { path: 'drinks/:id/add', component: DrinkDetailsComponent },
   { path: 'drinks/:id/delete', component: DrinkDetailsComponent },
+  { path: 'drinks/:id/edit', component: EditDrinkComponent },
 
   { path: '**', component: NotFoundComponent }
 ];

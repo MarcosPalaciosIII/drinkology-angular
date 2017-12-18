@@ -14,7 +14,8 @@ export class UserDrinksComponent implements OnInit {
   listOfDrinks: Drink[] = [];
 
   showConfig: any = {
-    showAddDrink: true
+    showAddDrink: false,
+    clicked: false
   };
 
   constructor(
@@ -38,14 +39,25 @@ export class UserDrinksComponent implements OnInit {
     console.log("Drink List Error!")
     console.log(err)
   })
+
+  // setTimeout(() => {
+  //   $(".show-addDrink").addClass("animated fadeInDown fadeOutUp");
+  // }, 5000);
+
   } // ngOnInit()
 
   toggleShow() {
+
     if (this.showConfig.showAddDrink) {
       this.showConfig.showAddDrink = false;
+      setTimeout(() => {
+        this.showConfig.clicked = false;
+
+      }, 500);
     }
     else {
       this.showConfig.showAddDrink = true;
+      this.showConfig.clicked = true;
     }
   }
 }
