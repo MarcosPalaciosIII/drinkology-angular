@@ -50,7 +50,7 @@ export class EditDrinkComponent implements OnInit {
     });
   } // getDrinkDetailsEdit()
 
-  putEditDrink(urlId) {
+  putEditDrink() {
     console.log(this.drinkInfo._id);
 
     this.drinkThang. putEditDrink(this.drinkInfo)
