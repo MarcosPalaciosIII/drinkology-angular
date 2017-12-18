@@ -9,6 +9,7 @@ export class Drink {
   description: string;
   image: string;
   ingredients: string[];
+  directions: string[];
 
   // these are assigned by the database
   drinkCreator: string;
