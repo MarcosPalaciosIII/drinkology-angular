@@ -19,7 +19,7 @@ export class DrinkDetailsComponent implements OnInit {
 
   constructor(
     private activatedThang: ActivatedRoute,
-    private userThang: UserApiService,
+    public userThang: UserApiService,
     private drinkThang: DrinkApiService,
     private routerThang: Router
   ) { }

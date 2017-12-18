@@ -12,10 +12,10 @@ declare var $: any;
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private userThang: UserApiService) { }
+  constructor(public userThang: UserApiService) { }
 
   ngOnInit() {
-  
+
   }
 
 }
