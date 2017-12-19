@@ -31,6 +31,11 @@ export class DrinkDetailsComponent implements OnInit {
         //        {path: 'drinks/:id'}
         //                         |
         console.log(myReqParams.id);
+        if(!this.userThang.currentUser) {
+          // THE MAGIC HAPPENS HERE
+          // (assign API results to component property)
+          this.routerThang.navigate(["/join"]);
+        }
 
         // this.drinkUrl = myReqParams.id;
         this.getDrinkDetails(myReqParams.id);
@@ -41,12 +46,12 @@ export class DrinkDetailsComponent implements OnInit {
   getDrinkDetails(urlId) {
     this.drinkThang.getOneDrink(urlId)
     .then((drinkResults: Drink) => {
-      // THE MAGIC HAPPENS HERE
-      // (assign API results to component property)
-      this.drinkInfo = drinkResults;
+        // THE MAGIC HAPPENS HERE
+        // (assign API results to component property)
+        this.drinkInfo = drinkResults;
     })
     .catch((err) => {
-      alert("Sorry! Something went wrong.")
+      alert("You Must Be Logged in To See Details.")
 
       console.log("Drink List Error!")
       console.log(err)
