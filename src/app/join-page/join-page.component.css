@@ -1,6 +1,4 @@
-div {
-  display: flex;
-}
+
 
 h2 {
   text-align: center;
@@ -13,5 +11,46 @@ h2 {
 }
 
 .join-forms {
+  display: flex;
   justify-content: space-around;
+  padding: 0 4vw;
 }
+
+
+/*.polling_message {
+  color: #d5d5d5;
+  margin-right: 2%;
+  float: left;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.view_port {
+  background-color: #0e0b16;
+  height: 25px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cylon_eye {
+  background-color: #d5d5d5;
+background-image: linear-gradient(to right,
+  #0e0b16 1%,
+  #ff553d 27%,
+  #0e0b16 55%);
+color: #d5d5d5;
+height: 100%;
+width: 20%;
+
+  -webkit-animation: 10s linear 0s infinite alternate move_eye;
+          animation: 10s linear 0s infinite alternate move_eye;
+}
+
+@-webkit-keyframes move_eye {
+   from { margin-left: -20%; } to { margin-left: 100%; }
+}
+@keyframes move_eye {
+   from { margin-left: -20%; } to { margin-left: 100%; }
+}*/

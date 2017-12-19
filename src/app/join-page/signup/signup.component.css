@@ -23,6 +23,7 @@ h2 {
   padding: 4px;
   width: 100%;
   border-width: 7px;
+  border-radius: .7vw;
 }
 
 #form button {
@@ -39,10 +40,19 @@ h2 {
   transition: .3s ease background;
   width: 100%;
   outline-color: #ff553d;
+  border-radius: .7vw;
 }
 
 #form button:hover {
   background: #e7dfdd;
   color: #0e0b16;
   transition: .3s ease background;
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  box-shadow: 5px -3px 1px 0 #0e0b16;
+  padding: 2px 0px 2px 2px;
+  margin: 5px 1px 3px 0px;
+  border: 1px ridge #ff553d;
+  border-radius: .7vw;
 }
