@@ -28,13 +28,18 @@ export class UserDrinksComponent implements OnInit {
   this.drinkThang.getUserFavorites()
   .then((drinkResults: Drink[]) => {
     console.log(drinkResults);
+    if(!this.userThang.currentUser) {
+      // THE MAGIC HAPPENS HERE
+      // (assign API results to component property)
+      this.routerThang.navigate(["/join"]);
+    }
 
     // THE MAGIC HAPPENS HERE
     // (assign API results to component property)
     this.listOfDrinks = drinkResults;
   })
   .catch((err) => {
-    alert("Sorry! Something went wrong.")
+    alert("You must be logged in to view your list.")
 
     console.log("Drink List Error!")
     console.log(err)
